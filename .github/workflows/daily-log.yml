@@ -1,0 +1,40 @@
+name: Discipline - The Key to Success  # 工作流程名稱
+
+on:
+  push:
+    branches:
+      - main  # 觸發條件是推送到 main 分支
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest  # 使用 Ubuntu 作為執行環境
+
+    steps:
+      - name: Checkout repository  # 下載儲存庫
+        uses: actions/checkout@v3
+
+      - name: Set up Git  # 設定 Git 配置
+        run: |
+          git config --global user.name "lll0425"
+          git config --global user.email "willy791124@gmail.com"
+
+      - name: Create or Update Daily Log  # 創建或更新日誌文件
+        run: |
+          mkdir -p $GITHUB_WORKSPACE/daily  # 確保是在正確的根目錄下
+          FILENAME="$GITHUB_WORKSPACE/daily/$(date +'%Y-%m-%d').md"
+          echo "# 日期: $(date +'%Y-%m-%d')" > $FILENAME
+          echo "今日任務:" >> $FILENAME
+          echo "- 任務 1: 規劃時間" >> $FILENAME
+          echo "- 任務 2: 使用 GitHub Workflows 自動上傳每日任務" >> $FILENAME
+          echo "- 任務 3: 寫論文心得三句話 123" >> $FILENAME
+          echo "更新時間: $(date '+%H:%M:%S')" >> $FILENAME
+
+      - name: Pull latest changes  # 拉取最新的遠端更改
+        run: |
+          git pull origin main
+
+      - name: Commit and Push Changes  # 提交並推送更改
+        run: |
+          git add .
+          git commit -m "Auto backup $(date +'%Y-%m-%d')"
+          git push origin main
