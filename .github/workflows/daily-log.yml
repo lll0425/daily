@@ -24,9 +24,9 @@ jobs:
           FILENAME="$GITHUB_WORKSPACE/daily/$(date +'%Y-%m-%d').md"
           echo "# 日期: $(date +'%Y-%m-%d')" > $FILENAME
           echo "今日任務:" >> $FILENAME
-          echo "- 任務 1: 規劃時間" >> $FILENAME
-          echo "- 任務 2: 使用 GitHub Workflows 自動上傳每日任務" >> $FILENAME
-          echo "- 任務 3: 寫論文心得三句話  " >> $FILENAME
+          echo "- [] 任務 1:挑人體工學椅 " >> $FILENAME
+          echo "- [] 任務 2: leetcode一題" >> $FILENAME
+          echo "- [] 任務 3: 論文找三句心得  " >> $FILENAME
           echo "更新時間: $(date '+%H:%M:%S')" >> $FILENAME
 
       - name: Pull latest changes
