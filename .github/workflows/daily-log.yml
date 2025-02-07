@@ -26,12 +26,13 @@ jobs:
           FILENAME="$GITHUB_WORKSPACE/daily/$(date +'%Y-%m-%d').md"
           echo "# 日期: $(date +'%Y-%m-%d')" > $FILENAME
           echo "## 今日任務:" >> $FILENAME
-          echo "- [ ] 任務 1: 挑人體工學椅" >> $FILENAME
-          echo "  > 註解: 目標價位 NT5000-8000 ，腰部支撐不要太凸還有頭部在90度需要靠助，躺下去有被扶起來的感覺。" >> $FILENAME
+          echo "- [ ] 任務 1:論文閱讀" >> $FILENAME
+          echo "  > 註解:三句心得。" >> $FILENAME
           echo "- [ ] 任務 2: leetcode 一題" >> $FILENAME
-          echo "  > 註解: 今天挑選 medium 難度的題目" >> $FILENAME
-          echo "- [ ] 任務 3: 論文找三句心得" >> $FILENAME
-          echo "  > 註解: Membership_Inference_Attacks_Against_Machine_Learning_Models，記錄三個重要觀點。" >> $FILENAME
+          echo "  > 註解: bilibili下一題" >> $FILENAME
+          echo "  > 註解: " >> $FILENAME
+          echo "- [ ] 任務 3:寫卡片" >> $FILENAME
+          echo "  > 註解: 情人節卡片 提早過。" >> $FILENAME
           echo "更新時間: $(date '+%H:%M:%S')" >> $FILENAME
 
       - name: Pull latest changes
@@ -41,7 +42,7 @@ jobs:
       - name: Commit and Push Changes
         run: |
           git add .
-          git commit -m "Auto backup $(date +'%Y-%m-%d')"
+          git commit -m "代辦事項3"
           git push https://github.com/lll0425/daily.git HEAD:main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
