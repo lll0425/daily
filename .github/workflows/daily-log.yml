@@ -26,7 +26,7 @@ jobs:
           FILENAME="$GITHUB_WORKSPACE/daily/$(date +'%Y-%m-%d').md"
           echo "# 日期: $(date +'%Y-%m-%d')" > $FILENAME
           echo "## 今日任務:" >> $FILENAME
-          echo "- [ ] 任務 1:荒野亂鬥(回歸)
+          echo "- [ ] 任務 1:荒野亂鬥(回歸)" >> $FILENAME
           echo "  > 註解:買了沙迪造型超帥" >> $FILENAME
           echo "- [ ] 任務 2:耍廢" >> $FILENAME
           echo "  > 註解: " >> $FILENAME
