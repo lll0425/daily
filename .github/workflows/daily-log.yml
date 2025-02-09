@@ -26,24 +26,12 @@ jobs:
           FILENAME="$GITHUB_WORKSPACE/daily/$(date +'%Y-%m-%d').md"
           echo "# 日期: $(date +'%Y-%m-%d')" > $FILENAME
           echo "## 今日任務:" >> $FILENAME
-          echo "- [ ] 任務 1:論文閱讀" >> $FILENAME
-          echo "  > 註解:RQ
-          RQ1: 機器學習模型是否容易受到 Membership Inference Attack（MIA）攻擊？
-          RQ2: 模型的 Overfitting 如何影響 MIA 攻擊成功率？
-          RQ3: 在 Target Model 為黑盒的情況下，攻擊者如何有效訓練 Attack Model？
-            > Methods
-          1.MIA 攻擊分析：針對不同類別數（CIFAR-10、CIFAR-100）、不同 ML 平台（Google Prediction API, Amazon ML）進行攻擊測試。
-          2.Shadow Training：攻擊者使用影子模型（Shadow Model）來模擬 Target Model 的行為，並訓練 Attack Model 來進行 Membership Inference Attack。
-          3.影響因素測試：分析 Overfitting 與 Class 數量對攻擊成功率的影響，並使用不同的模型來評估攻擊效能。
-            > Results
-          1.機器學習模型容易受到 MIA 攻擊，尤其是 API 服務訓練的模型（如 Google API）比本地訓練的更脆弱。
-          2.Shadow Training 能夠在 Target Model 是黑盒的情況下成功訓練 Attack Model，透過合成數據模擬目標模型的行為，提升攻擊成功率。
-          3.Overfitting 與攻擊成功率呈正相關：過度擬合的 Target Model 更容易受到 MIA 攻擊，並且當 Class 數量增加時，Overfitting 更嚴重，使攻擊更容易成功。" >> $FILENAME
-          echo "- [ ] 任務 2: leetcode 一題" >> $FILENAME
-          echo "  > 註解: bilibili下一題" >> $FILENAME
+          echo "- [ ] 任務 1:荒野亂鬥(回歸)
+          echo "  > 註解:買了沙迪造型超帥" >> $FILENAME
+          echo "- [ ] 任務 2:耍廢" >> $FILENAME
           echo "  > 註解: " >> $FILENAME
-          echo "- [ ] 任務 3:寫卡片" >> $FILENAME
-          echo "  > 註解: 情人節卡片 提早過。" >> $FILENAME
+          echo "- [ ] 任務 3:耍廢" >> $FILENAME
+          echo "  > 註解: 。" >> $FILENAME
           echo "更新時間: $(date '+%H:%M:%S')" >> $FILENAME
 
       - name: Pull latest changes
