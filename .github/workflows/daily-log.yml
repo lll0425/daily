@@ -26,12 +26,12 @@ jobs:
           FILENAME="$GITHUB_WORKSPACE/daily/$(date +'%Y-%m-%d').md"
           echo "# 日期: $(date +'%Y-%m-%d')" > $FILENAME
           echo "## 今日任務:" >> $FILENAME
-          echo "- [ ] 任務 1:去olive young 買化妝品" >> $FILENAME
-          echo "  > 註解:花了約4000台幣  " >> $FILENAME
-          echo "- [ ] 任務 2:去佛光寺拍照" >> $FILENAME
-          echo "  > 註解: 跌石頭拜拜 風景很漂亮" >> $FILENAME
-          echo "- [ ] 任務 3:搭韓國捷運" >> $FILENAME
-          echo "  > 註解:跟台北一樣複雜" >> $FILENAME
+          echo "- [ ] 任務 1:去釜山outlet" >> $FILENAME
+          echo "  > 註解:根本買不起 好好賺錢" >> $FILENAME
+          echo "- [ ] 任務 2:玩拍貼機" >> $FILENAME
+          echo "  > 註解:包包不見 差點找不到嚇死" >> $FILENAME
+          echo "- [ ] 任務 3:整理行李箱" >> $FILENAME
+          echo "  > 註解:好像被動過 下次要轉密碼" >> $FILENAME
           echo "更新時間: $(date '+%H:%M:%S')" >> $FILENAME
 
       - name: Pull latest changes
@@ -41,7 +41,7 @@ jobs:
       - name: Commit and Push Changes
         run: |
           git add .
-          git commit -m "代辦事項2"
+          git commit -m "2025-02-13"
           git push https://github.com/lll0425/daily.git HEAD:main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
