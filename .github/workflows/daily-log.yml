@@ -26,11 +26,11 @@ jobs:
           FILENAME="$GITHUB_WORKSPACE/daily/$(date +'%Y-%m-%d').md"
           echo "# 日期: $(date +'%Y-%m-%d')" > $FILENAME
           echo "## 今日任務:" >> $FILENAME
-          echo "- [ ] 任務 1:區塊練筆記上課就結束" >> $FILENAME
+          echo "- [ ] 任務 1:區塊鏈筆記上課就結束" >> $FILENAME
           echo "  > 註解:" >> $FILENAME
-          echo "- [ ] 任務 2:找出MIA現在的進展 問gpt如何延伸" >> $FILENAME
+          echo "- [ ] 任務 2:實作論文程式碼" >> $FILENAME
           echo "  > 註解:" >> $FILENAME
-          echo "- [ ] 任務 3:刷題" >> $FILENAME
+          echo "- [ ] 任務 3:看論文時燕姐果" >> $FILENAME
           echo "  > 註解:" >> $FILENAME
           echo "更新時間: $(date '+%H:%M:%S')" >> $FILENAME
 
