@@ -1,9 +1,6 @@
 name: Discipline - The Key to Success
 
-on:
-  push:
-    branches:
-      - main
+
 
 jobs:
   sync:
