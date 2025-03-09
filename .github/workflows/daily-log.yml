@@ -26,9 +26,9 @@ jobs:
           FILENAME="$GITHUB_WORKSPACE/daily/$(date +'%Y-%m-%d').md"
           echo "# 日期: $(date +'%Y-%m-%d')" > $FILENAME
           echo "## 今日任務:" >> $FILENAME
-          echo "- [ ] 任務 1:計算機網路做好筆記" >> $FILENAME
+          echo "- [ ] 任務 1:用論文程式碼" >> $FILENAME
           echo "  > 註解:" >> $FILENAME
-          echo "- [ ] 任務 2:實作論文程式碼" >> $FILENAME
+          echo "- [ ] 任務 2:改微積分考卷" >> $FILENAME
           echo "  > 註解:" >> $FILENAME
           echo "- [ ] 任務 3:寫一題leetcode" >> $FILENAME
           echo "  > 註解:" >> $FILENAME
