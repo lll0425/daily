@@ -28,7 +28,7 @@ jobs:
           echo "## 今日任務:" >> $FILENAME
           echo "- [ ] 任務 1:用論文程式碼" >> $FILENAME
           echo "  > 註解:" >> $FILENAME
-          echo "- [ ] 任務 2:改微積分考卷" >> $FILENAME
+          echo "- [ ] 任務 2:打桌球" >> $FILENAME
           echo "  > 註解:" >> $FILENAME
           echo "- [ ] 任務 3:寫一題leetcode" >> $FILENAME
           echo "  > 註解:" >> $FILENAME
